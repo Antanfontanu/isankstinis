@@ -4,21 +4,40 @@
 
 Ši programa yra skirta analizuoti tekste esančių žodžių dažnumą, poziciją tekste (kurioje eilutėje tas tikras žodis yra) ir nuorodų radimą.
 
-#  Kompiliavimo instrukcijos
+# Paleidimo instrukcijos
 
 ### Reikalavimai
 - C++17 suderinamas kompiliatorius
 - MinGW / Git Bash arba PowerShell Windows aplinkoje
 
-### Kompiliavimo komanda
+## Naudojant CMake
+1. Nukopijuokite projekto direktoriją į savo kompiuterį bei sukurkite build direktoriją <br>
+    ```
+   cd projekto_direktorija
+   mkdir build
+   cd build
+   ```
+2. Su Cmake generuojame reikalingus projekto failus, nurodykite kelią iki CmakeLists.txt failo <br>
+   ```
+   cmake ..
+   ```
+3. Sukompiliuojame kodą ir sukuriame `.exe` failą <br>
+   ```
+   cmake --build . --config Release
+   ```
+4. Paleidžiame .exe failus testavimo arba programos<br>
+  ```
+  .\Antanfontanu.exe
+  
+  ```
+  
 
-Būnant projekto šakniniame aplanke:
-
-```bash
- g++ -std=c++17 main.cpp funkcijos.cpp  -o programa  
-
-Paleidžiame
-.\programa.exe
+**Arba galite pasinaudoti pateiktu `run.bat` failu** <br>
+Tada Nukopijuokite projekto direktoriją į savo kompiuterį ir paleiskite `run.bat` failą
+  ```
+   cd projekto_direktorija
+   .\run.bat
+  ```
 
 
 #  Kompiuterio charakteristikos
